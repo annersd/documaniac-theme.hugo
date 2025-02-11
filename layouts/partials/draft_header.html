@@ -1,0 +1,7 @@
+{{ if .Draft}}
+{{ $draftMessage := T "draft_message" }}
+{{ $draftTitle := T "draft_title" }}
+{{ $shortcode := printf `{{< alert color="info" title="%s" >}}%s{{< /alert >}}` $draftTitle $draftMessage }}
+{{ $rendered := .Page.RenderString $shortcode }}
+{{ $rendered | safeHTML }}
+{{ end }}

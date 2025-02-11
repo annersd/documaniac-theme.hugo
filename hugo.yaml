@@ -1,0 +1,89 @@
+baseURL: http://localhost/local
+languageCode: 'de'
+title: 'local'
+
+# Language settings
+contentDir: "content/de"
+defaultContentLanguage: "de"
+defaultContentLanguageInSubdir: false
+# Useful when translating.
+enableMissingTranslationPlaceholders: true
+
+# Theme from 
+# https://themes.gohugo.io/themes/hugo-book/
+# theme: 'hugo-book'
+theme: 'docsy'
+
+ignoreLogs:
+  - 'warning-goldmark-raw-html'
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false # Required for dark-mode
+
+# Add copyright information
+copyright: "© 2025 Your Company"
+
+params:
+  meta:
+    
+  offlineSearch: true
+  ui:
+    navbar_logo: true
+    sidebar_menu_compact: true
+    sidebar_menu_foldable: true
+    ul_show: 1
+    showLightDarkModeMenu: true
+    sidebar_menu_compact: true
+    sidebar_menu_foldable: true
+    navbar_translucent_over_cover_disable: true
+    # Adds a reading time to the top of each doc.
+    # If you want this feature, but occasionally need to remove the Reading time from a single page,
+    # add "hide_readingtime: true" to the page's front matter
+    readingtime:
+      enable: false
+  # fonts:
+  #   - name: Noto Sans # cspell:disable-line
+  #     sizes: [300, 400, 600, 700]
+  #     type: sans_serif
+  version:
+    current: "preview"
+    previous: "latest"
+  versions:
+    - version: latest
+      url: '/latest/'
+    - version: v25.1.x
+      url: '/v25.1.x/'
+    - version: v24.6.x
+      url: '/v24.6.x/'
+    - version: ---
+      url: '/'
+    - version: next
+      url: '/next/'
+  version_menu: Version
+  
+
+outputs:
+  section: [ "HTML", "print", "pdf" ]
+  page: ["HTML", "pdf"]
+
+module:
+  imports:
+    - path: github.com/google/docsy
+      disable: false
+
+languages:
+  en:
+    languageName: "English"
+    contentDir: content/en
+    params:
+      description: "A technical documentation website"
+  de:
+    languageName: "Deutsch"   
+    params:
+      description: "Eine technische Dokumentationswebsite"
