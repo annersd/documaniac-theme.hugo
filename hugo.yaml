@@ -51,21 +51,21 @@ params:
   #   - name: Noto Sans # cspell:disable-line
   #     sizes: [300, 400, 600, 700]
   #     type: sans_serif
-  version:
-    current: "preview"
-    previous: "latest"
-  versions:
-    - version: latest
-      url: '/latest/'
-    - version: v25.1.x
-      url: '/v25.1.x/'
-    - version: v24.6.x
-      url: '/v24.6.x/'
-    - version: ---
-      url: '/'
-    - version: next
-      url: '/next/'
-  version_menu: Version
+  # version:
+  #   current: "preview"
+  #   previous: "latest"
+  # versions:
+  #   - version: latest
+  #     url: '/latest/'
+  #   - version: v25.1.x
+  #     url: '/v25.1.x/'
+  #   - version: v24.6.x
+  #     url: '/v24.6.x/'
+  #   - version: ---
+  #     url: '/'
+  #   - version: next
+  #     url: '/next/'
+  # version_menu: Version
   
 
 outputs:
